@@ -1,21 +1,11 @@
+@import './src/styles';
+
 :host {
   padding: 10px;
 }
 
-@mixin app {
-  user-select: none;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(26px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  border: 1.5px solid rgba(209, 213, 219, 0.3);
-  color: #45305e;
-  padding: 0;
-  font-family: "Roboto";
-}
-
-.app-1 {
-  @include app;
+.main-column {
+  @include column;
 
   header {
     display: flex;
@@ -29,10 +19,12 @@
       padding: 10px;
       display: flex;
       gap: 10px;
+
       h1 {
         font-size: 1.2em;
         font-weight: 500;
       }
+
       .icon {
         backdrop-filter: blur(6px) saturate(200%);
         -webkit-backdrop-filter: blur(1px) saturate(200%);
@@ -43,6 +35,7 @@
         height: 15px;
         color: #a2a1b9;
         font-size: 0.7em;
+
         i {
           position: absolute;
           top: 50%;
@@ -50,6 +43,7 @@
           transform: translate(-50%, -50%);
         }
       }
+
       .a {
         margin-left: 40px;
       }
@@ -81,10 +75,10 @@
       .light {
         color: gray;
       }
+
       .day:nth-child(10) {
         color: transparent;
         background: linear-gradient(blue, navy);
-        background-clip: text;
         -webkit-background-clip: text;
       }
     }
@@ -133,10 +127,12 @@
           padding: 10px;
           border-radius: 10px;
         }
+
         span {
           color: gray;
           font-size: 0.7em;
         }
+
         h2 {
           font-weight: 500;
           font-size: 0.8em;
@@ -150,10 +146,12 @@
           padding: 10px;
           border-radius: 10px;
         }
+
         span {
           color: gray;
           font-size: 0.7em;
         }
+
         h2 {
           font-weight: 500;
           font-size: 0.8em;
@@ -167,10 +165,12 @@
           padding: 10px;
           border-radius: 10px;
         }
+
         span {
           color: gray;
           font-size: 0.7em;
         }
+
         h2 {
           font-weight: 500;
           font-size: 0.8em;
@@ -188,10 +188,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       i {
         font-size: 2em;
         font-weight: 100;
       }
+
       margin-top: -115px;
       margin-left: 185px;
     }
@@ -215,14 +217,17 @@
         gap: 20px;
         font-size: 1.3em;
         border-radius: 20px;
+
         .light {
           color: gray;
         }
+
         li {
           &:nth-child(1) {
             margin-left: -30px;
           }
         }
+
         //margin-left: -35px;
       }
     }

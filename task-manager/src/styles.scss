@@ -1,4 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@mixin column {
+  user-select: none;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(26px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  border: 1.5px solid rgba(209, 213, 219, 0.3);
+  color: #45305e;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   margin: 0;
   background: pink;
