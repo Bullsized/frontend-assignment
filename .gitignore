@@ -9,6 +9,7 @@ test-client
 *#
 .DS_STORE
 .idea
+task-manager/.idea
 *.iml
 .vscode
 .node_history
