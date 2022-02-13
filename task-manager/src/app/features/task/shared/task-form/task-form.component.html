@@ -1,1 +1,14 @@
-<p>task-form works!</p>
+<ng-container *ngIf="form">
+
+  <input type="text" placeholder="Task Title" [formControl]="$any(form).controls['title']"/>
+
+  <textarea rows="4" placeholder="Add a description..." [formControl]="$any(form).controls['description']"></textarea>
+
+  <label class="toggle-switch" *ngIf="showCompletionSlider">
+    <input class="alert-toggle" type="checkbox" name="alert" checked="checked"
+           [formControl]="$any(form).controls['isComplete']"/>
+    <span class="toggle-slider"></span>
+    <p class="is-completed-p">Is this task completed?</p>
+  </label>
+
+</ng-container>

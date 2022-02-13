@@ -1,0 +1,76 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+input:first-of-type {
+  margin-bottom: 10px;
+}
+
+input[type=text], textarea {
+  background: #fdfbfc;
+  padding: 5px;
+  border-radius: 5px;
+  border-color: transparent;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+textarea {
+  resize: both;
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 100px;
+  max-height: 650px;
+}
+
+@media only screen and (max-width: 500px) {
+  textarea {
+    resize: vertical;
+  }
+}
+
+.toggle-switch {
+  .alert-toggle {
+    display: none;
+  }
+
+  .toggle-slider {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 111px;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+    width: 60px;
+    height: 34px;
+
+    &:before {
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: 0.4s;
+    }
+  }
+
+  input {
+    &:checked + .toggle-slider {
+      background: linear-gradient(45deg, #fe82a1, #fe9e90);
+    }
+
+    &:checked + .toggle-slider:before {
+      -ms-transform: translateX(25px);
+      transform: translateX(25px);
+    }
+  }
+
+  .is-completed-p {
+    padding-top: 5px;
+  }
+}

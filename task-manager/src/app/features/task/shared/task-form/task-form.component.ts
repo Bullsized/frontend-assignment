@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-task-form',
   templateUrl: './task-form.component.html',
   styleUrls: ['./task-form.component.scss']
 })
-export class TaskFormComponent implements OnInit {
+export class TaskFormComponent {
+  @Input()
+  form: FormGroup | undefined;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  @Input()
+  showCompletionSlider: boolean | undefined;
 }
