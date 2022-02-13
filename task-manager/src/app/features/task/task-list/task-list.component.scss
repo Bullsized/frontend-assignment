@@ -8,228 +8,33 @@
   @include column;
 
   header {
-    display: flex;
-    gap: 200px;
-    padding: 15px;
-    padding-top: 20px;
+    @include flex-space-between;
+    padding: 20px 15px 15px;
   }
 
-  .calendar {
-    .cal-nav {
-      padding: 10px;
-      display: flex;
-      gap: 10px;
-
-      h1 {
-        font-size: 1.2em;
-        font-weight: 500;
-      }
-
-      .icon {
-        backdrop-filter: blur(6px) saturate(200%);
-        -webkit-backdrop-filter: blur(1px) saturate(200%);
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        border: 1px solid rgba(209, 213, 219, 0.3);
-        width: 15px;
-        height: 15px;
-        color: #a2a1b9;
-        font-size: 0.7em;
-
-        i {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
-
-      .a {
-        margin-left: 40px;
-      }
-    }
-
-    .cal-days {
-      display: flex;
-      gap: 12.5px;
-      padding: 10px;
-      backdrop-filter: blur(6px) saturate(200%);
-      -webkit-backdrop-filter: blur(6px) saturate(200%);
-      background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 5px;
-      border: 1px solid rgba(209, 213, 219, 0.3);
-      margin-left: 10px;
-      margin-right: 10px;
-      font-size: 0.8em;
-    }
-
-    .cal-dates {
-      display: grid;
-      grid-template-columns: repeat(7, 0.2fr);
-      grid-template-rows: repeat(6, 0.2fr);
-      grid-column-gap: 14px;
-      grid-row-gap: 8px;
-      padding: 10px;
-      padding-left: 20px;
-
-      .light {
-        color: gray;
-      }
-
-      .day:nth-child(10) {
-        color: transparent;
-        background: linear-gradient(blue, navy);
-        -webkit-background-clip: text;
-      }
-    }
+  h2 {
+    margin: 0;
   }
 
-  .manager {
+  p {
+    margin: 10px 0;
+    text-align: justify;
+  }
+
+  #add-task-icon {
+    @include my-auto;
+  }
+
+  .task-card {
     background: rgba(250, 246, 245, 0.2);
-    border-radius: 20px;
+    border-radius: $border-radius;
     box-shadow: 0px -1px 2px rgba(71, 66, 65, 0.5);
+    padding: 10px;
+    margin: 10px;
+  }
 
-    &::before {
-      content: "";
-      display: block;
-      width: 80px;
-      height: 3px;
-      background: gray;
-      border-radius: 10px;
-      margin-top: 18px;
-      margin-left: 95px;
-    }
-
-    .schedule {
-      //padding: 10px;
-      padding-top: 20px;
-      margin-top: 20px;
-      padding-bottom: 30px;
-
-      h1 {
-        font-weight: 500;
-        font-size: 1.1em;
-        padding-left: 10px;
-      }
-
-      .task {
-        display: flex;
-        gap: 10px;
-        margin-top: 10px;
-        padding-left: 10px;
-      }
-
-      .task-1,
-      .task-4 {
-        .icon {
-          color: #fea4b3;
-          background: #fae1e5;
-          padding: 10px;
-          border-radius: 10px;
-        }
-
-        span {
-          color: gray;
-          font-size: 0.7em;
-        }
-
-        h2 {
-          font-weight: 500;
-          font-size: 0.8em;
-        }
-      }
-
-      .task-2 {
-        .icon {
-          color: #b483fe;
-          background: #eadaf4;
-          padding: 10px;
-          border-radius: 10px;
-        }
-
-        span {
-          color: gray;
-          font-size: 0.7em;
-        }
-
-        h2 {
-          font-weight: 500;
-          font-size: 0.8em;
-        }
-      }
-
-      .task-3 {
-        .icon {
-          color: #25d5f1;
-          background: #daf0f6;
-          padding: 10px;
-          border-radius: 10px;
-        }
-
-        span {
-          color: gray;
-          font-size: 0.7em;
-        }
-
-        h2 {
-          font-weight: 500;
-          font-size: 0.8em;
-        }
-      }
-    }
-
-    button {
-      background: #3c2c58;
-      border: 1px solid transparent;
-      color: #f6f7f9;
-      border-radius: 50%;
-      width: 55px;
-      height: 55px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      i {
-        font-size: 2em;
-        font-weight: 100;
-      }
-
-      margin-top: -115px;
-      margin-left: 185px;
-    }
-
-    .nav {
-      z-index: -10;
-      border-radius: 20px;
-
-      margin-top: 10px;
-
-      ul {
-        padding: {
-          right: 50px;
-          top: 20px;
-          bottom: 20px;
-          left: 50px;
-        }
-        background: rgba(250, 246, 245, 0.5);
-        box-shadow: 0px -1px 2px rgba(71, 66, 65, 0.75);
-        display: flex;
-        gap: 20px;
-        font-size: 1.3em;
-        border-radius: 20px;
-
-        .light {
-          color: gray;
-        }
-
-        li {
-          &:nth-child(1) {
-            margin-left: -30px;
-          }
-        }
-
-        //margin-left: -35px;
-      }
-    }
+  .task-card-actions {
+    @include flex-space-between;
+    margin-top: 10px;
   }
 }

@@ -1,103 +1,68 @@
 <div class="main-column">
-  <header><i class="fas fa-stream"></i><i class="fal fa-search"></i></header>
-  <div class="calendar">
-    <div class="cal-nav">
-      <div class="month">
-        <h1>September 2021</h1>
-      </div>
-      <div class="icon a"><i class="far fa-chevron-left"></i></div>
-      <div class="icon"><i class="far fa-chevron-right"></i></div>
-    </div>
-    <div class="cal-days">
-      <h2>Mon</h2>
-      <h2>Tue</h2>
-      <h2>Wed</h2>
-      <h2>Thu</h2>
-      <h2>Fri</h2>
-      <h2>Sat</h2>
-      <h2>Sun</h2>
-    </div>
-    <div class="cal-dates">
-      <h5 class="light">30</h5>
-      <h1 class="light">31</h1>
-      <h5 class="day">1</h5>
-      <h5 class="day">2</h5>
-      <h5 class="day">3</h5>
-      <h5 class="day">4</h5>
-      <h5 class="day">5</h5>
-      <h5 class="day">6</h5>
-      <h5 class="day">7</h5>
-      <h5 class="day">8</h5>
-      <h5 class="day">9</h5>
-      <h5 class="day">10</h5>
-      <h5 class="day">11</h5>
-      <h5 class="day">12</h5>
-      <h5 class="day">13</h5>
-      <h5 class="day">14</h5>
-      <h5 class="day">15</h5>
-      <h5 class="day">16</h5>
-      <h5 class="day">17</h5>
-      <h5 class="day">18</h5>
-      <h5 class="day">19</h5>
-      <h5 class="day">20</h5>
-      <h5 class="day">21</h5>
-      <h5 class="day">22</h5>
-      <h5 class="day">23</h5>
-      <h5 class="day">24</h5>
-      <h5 class="day">25</h5>
-      <h5 class="day">26</h5>
-      <h5 class="day">27</h5>
-      <h5 class="day">28</h5>
-      <h5 class="day">29</h5>
-      <h5 class="day">30</h5>
-      <h5 class="light">1</h5>
-      <h5 class="light">2</h5>
-      <h5 class="light">3</h5>
-      <h5 class="light">4</h5>
-      <h5 class="light">5</h5>
-      <h5 class="light">6</h5>
-      <h5 class="light">7</h5>
-      <h5 class="light">8</h5>
-      <h5 class="light">9</h5>
-      <h5 class="light">10</h5>
+  <header>
+    <h1>Tasks Manager</h1>
+    <a routerLink="add" id="add-task-icon" title="Add a new task ~">
+      <fa-icon [icon]="faPlusCircle" size="2x"></fa-icon>
+    </a>
+  </header>
+
+  <div class="task-card">
+    <h2>Bacon ipsum dolor</h2>
+    <p>Bacon ipsum dolor amet boudin shoulder burgdoggen chicken pork loin short ribs andouille swine sausage pork belly
+      pancetta venison. Turducken drumstick buffalo, flank boudin chicken tenderloin. Pork loin shoulder kevin tail
+      cupim, swine burgdoggen. Tongue buffalo ribeye porchetta salami turkey. Chicken meatloaf strip steak, swine salami
+      pork biltong rump. Kielbasa pork belly short ribs salami, ball tip ground round cow tri-tip.</p>
+    <div class="task-card-actions">
+      <a title="Complete this task ~">
+        <fa-icon [icon]="faCheckCircle" size="2x"></fa-icon>
+      </a>
+      <a routerLink="edit/12" title="Edit this task ~">
+        <fa-icon [icon]="faInfoCircle" size="2x"></fa-icon>
+      </a>
+      <a title="Delete this task ~">
+        <fa-icon [icon]="faTimesCircle" size="2x"></fa-icon>
+      </a>
     </div>
   </div>
-  <div class="manager">
-    <div class="schedule">
-      <h1>Schedule</h1>
-      <div class="task task-1">
-        <div class="icon"><i class="far fa-comment-dots"></i></div>
-        <div class="details">
-          <h2>Meeting Team</h2><span class="span">9:00</span>
-        </div>
-      </div>
-      <div class="task task-2">
-        <div class="icon"><i class="fas fa-balance-scale"></i></div>
-        <div class="details">
-          <h2>Landing Page - Project 1</h2><span class="span">10:00 - 12:30</span>
-        </div>
-      </div>
-      <div class="task task-3">
-        <div class="icon"><i class="fas fa-mug-hot"></i></div>
-        <div class="details">
-          <h2>Lunch with Emma</h2><span class="span">13:30</span>
-        </div>
-      </div>
-      <div class="task task-4">
-        <div class="icon"><i class="far fa-comment"></i></div>
-        <div class="details">
-          <h2>Prepare Presentation</h2><span class="span">15:00 to 16:00</span>
-        </div>
-      </div>
-      <nav class="nav">
-        <ul class="nav-ul">
-          <li> <i class="fal fa-calendar-alt"></i></li>
-          <li class="light"><i class="far fa-check-square"></i></li>
-          <li class="light"> <i class="fal fa-chart-pie-alt"></i></li>
-          <li class="light"> <i class="far fa-user"></i></li>
-        </ul>
-      </nav>
+
+  <div class="task-card">
+    <h2>Spare ribs porchetta chislic beef ribs</h2>
+    <p>Spare ribs porchetta chislic beef ribs, pork chop pancetta pork belly. Tenderloin kevin tail, chislic tongue
+      filet mignon short loin tri-tip cow jowl landjaeger boudin. Frankfurter rump pork chop, andouille sausage picanha
+      pork hamburger meatloaf kevin cupim turkey sirloin drumstick brisket. Short ribs jowl beef rump ball tip fatback
+      buffalo ground round bacon. Salami cow doner, boudin pancetta tongue filet mignon ribeye shoulder rump kevin
+      bresaola tail.
+
+      Short loin chuck venison ribeye kielbasa chicken. Venison strip steak alcatra pork loin beef ribs swine pancetta
+      biltong prosciutto picanha ground round burgdoggen ham. Tenderloin beef doner, pig hamburger meatball boudin short
+      loin buffalo landjaeger cow filet mignon pork belly short ribs. Meatloaf ball tip tenderloin jowl shank
+      bresaola.</p>
+    <div class="task-card-actions">
+      <a title="Complete this task ~">
+        <fa-icon [icon]="faCheckCircle" size="2x"></fa-icon>
+      </a>
+      <a routerLink="edit/23" title="Edit this task ~">
+        <fa-icon [icon]="faInfoCircle" size="2x"></fa-icon>
+      </a>
+      <a title="Delete this task ~">
+        <fa-icon [icon]="faTimesCircle" size="2x"></fa-icon>
+      </a>
     </div>
-    <button><i class="fal fa-plus"></i></button>
+  </div>
+
+  <div class="task-card">
+    <h2>Pork chop bresaola beef pig venison andouille</h2>
+    <!--    <p>Empty description for testing purposes</p>-->
+    <div class="task-card-actions">
+      <a title="Complete this task ~">
+        <fa-icon [icon]="faCheckCircle" size="2x"></fa-icon>
+      </a>
+      <a routerLink="edit/77" title="Edit this task ~">
+        <fa-icon [icon]="faInfoCircle" size="2x"></fa-icon>
+      </a>
+      <a title="Delete this task ~">
+        <fa-icon [icon]="faTimesCircle" size="2x"></fa-icon>
+      </a>
+    </div>
   </div>
 </div>
