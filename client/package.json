@@ -2,11 +2,11 @@
   "name": "task-manager",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "ng": "../task-manager/node_modules/.bin/ng",
+    "start": "../task-manager/node_modules/.bin/ng serve",
+    "build": "../task-manager/node_modules/.bin/ng build",
+    "watch": "../task-manager/node_modules/.bin/ng build --watch --configuration development",
+    "test": "../task-manager/node_modules/.bin/ng test"
   },
   "private": true,
   "dependencies": {
@@ -18,9 +18,9 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
-    "@fortawesome/angular-fontawesome": "^0.10.1",
-    "@fortawesome/fontawesome-svg-core": "^1.3.0",
-    "@fortawesome/free-solid-svg-icons": "^6.0.0",
+    "@fortawesome/angular-fontawesome": "0.10.1",
+    "@fortawesome/fontawesome-svg-core": "1.3.0",
+    "@fortawesome/free-solid-svg-icons": "6.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
