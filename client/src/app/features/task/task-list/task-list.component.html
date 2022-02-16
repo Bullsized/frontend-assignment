@@ -6,63 +6,34 @@
     </a>
   </header>
 
-  <div class="task-card">
-    <h2>Bacon ipsum dolor</h2>
-    <p>Bacon ipsum dolor amet boudin shoulder burgdoggen chicken pork loin short ribs andouille swine sausage pork belly
-      pancetta venison. Turducken drumstick buffalo, flank boudin chicken tenderloin. Pork loin shoulder kevin tail
-      cupim, swine burgdoggen. Tongue buffalo ribeye porchetta salami turkey. Chicken meatloaf strip steak, swine salami
-      pork biltong rump. Kielbasa pork belly short ribs salami, ball tip ground round cow tri-tip.</p>
-    <div class="task-card-actions">
-      <a title="Complete this task ~">
-        <fa-icon [icon]="faCheckCircle" size="2x"></fa-icon>
-      </a>
-      <a routerLink="edit/12" title="Edit this task ~">
-        <fa-icon [icon]="faInfoCircle" size="2x"></fa-icon>
-      </a>
-      <a title="Delete this task ~">
-        <fa-icon [icon]="faTimesCircle" size="2x"></fa-icon>
-      </a>
+  <ng-container *ngIf="tasks.length > 0; else noTasks">
+    <div *ngFor="let task of tasks" class="task-card">
+      <h2 [ngClass]="{'completed' : task.isComplete}">
+        {{ task.title }}
+      </h2>
+      <p *ngIf="task.description" [ngClass]="{'completed' : task.isComplete}">
+        {{ task.description }}
+      </p>
+      <div class="task-card-actions">
+        <a title="Complete this task ~" (click)="completeTask(task)">
+          <fa-icon [icon]="faCheckCircle" size="2x" *ngIf="!task.isComplete; else dotCircle"></fa-icon>
+          <ng-template #dotCircle>
+            <fa-icon [icon]="faDotCircle" size="2x"></fa-icon>
+          </ng-template>
+        </a>
+        <a title="Edit this task ~" [routerLink]="['edit', task.id]">
+          <fa-icon [icon]="faInfoCircle" size="2x"></fa-icon>
+        </a>
+        <a title="Delete this task ~" (click)="deleteTask(task)">
+          <fa-icon [icon]="faTimesCircle" size="2x"></fa-icon>
+        </a>
+      </div>
     </div>
-  </div>
+  </ng-container>
 
-  <div class="task-card">
-    <h2>Spare ribs porchetta chislic beef ribs</h2>
-    <p>Spare ribs porchetta chislic beef ribs, pork chop pancetta pork belly. Tenderloin kevin tail, chislic tongue
-      filet mignon short loin tri-tip cow jowl landjaeger boudin. Frankfurter rump pork chop, andouille sausage picanha
-      pork hamburger meatloaf kevin cupim turkey sirloin drumstick brisket. Short ribs jowl beef rump ball tip fatback
-      buffalo ground round bacon. Salami cow doner, boudin pancetta tongue filet mignon ribeye shoulder rump kevin
-      bresaola tail.
-
-      Short loin chuck venison ribeye kielbasa chicken. Venison strip steak alcatra pork loin beef ribs swine pancetta
-      biltong prosciutto picanha ground round burgdoggen ham. Tenderloin beef doner, pig hamburger meatball boudin short
-      loin buffalo landjaeger cow filet mignon pork belly short ribs. Meatloaf ball tip tenderloin jowl shank
-      bresaola.</p>
-    <div class="task-card-actions">
-      <a title="Complete this task ~">
-        <fa-icon [icon]="faCheckCircle" size="2x"></fa-icon>
-      </a>
-      <a routerLink="edit/23" title="Edit this task ~">
-        <fa-icon [icon]="faInfoCircle" size="2x"></fa-icon>
-      </a>
-      <a title="Delete this task ~">
-        <fa-icon [icon]="faTimesCircle" size="2x"></fa-icon>
-      </a>
+  <ng-template #noTasks>
+    <div class="task-card text-center">
+      Whoah, so much empty! Why don't you try adding some tasks with the + icon in the top right corner?
     </div>
-  </div>
-
-  <div class="task-card">
-    <h2>Pork chop bresaola beef pig venison andouille</h2>
-    <!--    <p>Empty description for testing purposes</p>-->
-    <div class="task-card-actions">
-      <a title="Complete this task ~">
-        <fa-icon [icon]="faCheckCircle" size="2x"></fa-icon>
-      </a>
-      <a routerLink="edit/77" title="Edit this task ~">
-        <fa-icon [icon]="faInfoCircle" size="2x"></fa-icon>
-      </a>
-      <a title="Delete this task ~">
-        <fa-icon [icon]="faTimesCircle" size="2x"></fa-icon>
-      </a>
-    </div>
-  </div>
+  </ng-template>
 </div>
