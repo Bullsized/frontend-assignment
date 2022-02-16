@@ -1,6 +1,10 @@
 <ng-container *ngIf="form">
 
-  <input type="text" placeholder="Task Title" [formControl]="$any(form).controls['title']"/>
+  <input type="text" placeholder="Task title" [formControl]="$any(form).controls['title']"/>
+
+  <p class='title-error' *ngIf="$any(form).controls['title'].errors?.required && $any(form).controls['title'].touched">
+    This field cannot be empty.
+  </p>
 
   <textarea rows="4" placeholder="Add a description..." [formControl]="$any(form).controls['description']"></textarea>
 

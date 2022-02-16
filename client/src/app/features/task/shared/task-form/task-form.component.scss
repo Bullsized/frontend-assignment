@@ -16,6 +16,11 @@ input[type=text], textarea {
   font-family: 'Roboto', sans-serif;
 }
 
+.title-error {
+  font-size: 10px;
+  margin-top: 0;
+}
+
 textarea {
   resize: both;
   min-width: 300px;
