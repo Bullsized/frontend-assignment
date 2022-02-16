@@ -17,7 +17,7 @@ export class TasksService {
     return this.http.get<Task[]>(`${this.apiUrl}/tasks`);
   }
 
-  getTaskById(taskId: number): Observable<Task> {
+  getTaskById(taskId: string): Observable<Task> {
     return this.http.get<Task>(`${this.apiUrl}/tasks/${taskId}`);
   }
 
@@ -25,11 +25,11 @@ export class TasksService {
     return this.http.post<Task>(`${this.apiUrl}/tasks`, task);
   }
 
-  editTask(task: Task, taskId: number): Observable<Task> {
+  editTask(task: Task, taskId: string): Observable<Task> {
     return this.http.patch<Task>(`${this.apiUrl}/tasks/${taskId}`, task);
   }
 
-  deleteTask(taskId: number) {
+  deleteTask(taskId: string) {
     return this.http.delete(`${this.apiUrl}/tasks/${taskId}`);
   }
 }
