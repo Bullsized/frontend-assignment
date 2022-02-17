@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TaskListComponent } from './task-list.component';
+import { FontAwesomeTestingModule } from '@fortawesome/angular-fontawesome/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('TaskListComponent', () => {
   let component: TaskListComponent;
@@ -8,7 +10,14 @@ describe('TaskListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TaskListComponent ]
+      imports: [FontAwesomeTestingModule, RouterTestingModule, HttpClientTestingModule],
+      declarations: [ TaskListComponent ],
+      providers: [
+        {
+          provide: 'apiUrl',
+          useValue: ''
+        }
+      ]
     })
     .compileComponents();
   });
