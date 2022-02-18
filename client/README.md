@@ -1,6 +1,6 @@
 # TaskManager
 
-![main](https://github.com/Bullsized/frontend-assignment/tree/master/client/src/assets/images/01home.png)
+![main](https://raw.githubusercontent.com/Bullsized/frontend-assignment/master/client/src/assets/images/01home.png)
 
 ## Set up
 
@@ -95,13 +95,13 @@ task-list.component - used to list the tasks. From it one can delete tasks or ma
 
 ### Add a task
 
-![main](https://github.com/Bullsized/frontend-assignment/tree/master/client/src/assets/images/02addTask.png)
+![main](https://raw.githubusercontent.com/Bullsized/frontend-assignment/master/client/src/assets/images/02addTask.png)
 
 task-add.component - used to add a task to the list. Bear in mind that the 'isComplete' is always false for a newly added task - self explanatory why.
 
 ### Edit a task
 
-![main](https://github.com/Bullsized/frontend-assignment/tree/master/client/src/assets/images/03editTask.png)
+![main](https://raw.githubusercontent.com/Bullsized/frontend-assignment/master/client/src/assets/images/03editTask.png)
 
 task-edit.component - used to edit a task - either the title, description or isComplete.
 
